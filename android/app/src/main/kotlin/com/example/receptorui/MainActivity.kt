@@ -1,4 +1,4 @@
-package com.example.proyecto_prueba02
+package com.example.receptorui
 
 import io.flutter.embedding.android.FlutterActivity
 

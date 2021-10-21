@@ -1,29 +1,44 @@
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
-import 'pages/splash_screen.dart';
+import 'package:receptorui/vistas/InicioSesion.dart';
 
 void main() {
-  runApp(MyUiApp());
+  runApp(MyApp());
 }
 
-class MyUiApp extends StatelessWidget {
-
-  Color _primaryColor = HexColor('#DC54FE');
-  Color _accentColor = HexColor('#8A02AE');
-
+class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter primeros pasos',
+      routes: {
+        '/': (context) => haciaSesion(),
+        '/login': (context) => InicioSesion()
+      },
       theme: ThemeData(
-        primaryColor: _primaryColor,
-        accentColor: _accentColor,
-        scaffoldBackgroundColor: Colors.grey.shade100,
-        primarySwatch: Colors.grey,
+        primarySwatch: Colors.blue,
       ),
-      home: const SplashScreen(title: 'Prueba de flutter'),
     );
   }
 }
 
+class haciaSesion extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Transición"),
+      ),
+      body: Center(
+        child: TextButton(
+          style: TextButton.styleFrom(
+            textStyle: const TextStyle(fontSize: 20),
+          ),
+          onPressed: () {
+            Navigator.of(context).pushNamed('/login');
+          },
+          child: Text('Enabled'),
+        ),
+      ),
+    );
+  }
+}
