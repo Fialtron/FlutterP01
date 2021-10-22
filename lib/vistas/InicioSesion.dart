@@ -25,6 +25,7 @@ class InicioSesion extends StatelessWidget {
                         alignment: Alignment.center,
                         child: Container(
                           color: Color.fromRGBO(224, 218, 218, 0.45),
+                          width: 500,
                           child: SingleChildScrollView(
                             padding: const EdgeInsets.all(16),
                             child: ConstrainedBox(
@@ -40,6 +41,7 @@ class InicioSesion extends StatelessWidget {
                                           fontFamily: 'Roboto', fontSize: 25),
                                     ),
                                     SizedBox(
+                                      width: 300,
                                       child: Column(
                                         children: [
                                           TextFormField(
@@ -48,6 +50,9 @@ class InicioSesion extends StatelessWidget {
                                               hintText: 'correo@ejemplo.com',
                                               labelText: 'Usuario:',
                                             ),
+                                          ),
+                                          SizedBox(
+                                            height: 20,
                                           ),
                                           TextFormField(
                                             obscureText: true,
@@ -59,14 +64,31 @@ class InicioSesion extends StatelessWidget {
                                         ],
                                       ),
                                     ),
-                                    TextButton(
-                                        child: const Text('Iniciar Sesión'),
-                                        onPressed: () {}),
+                                    SizedBox(
+                                      width: 300,
+                                      height: 50,
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(5),
+                                        child: ElevatedButton(
+                                          style: ButtonStyle(
+                                            backgroundColor:
+                                                MaterialStateProperty
+                                                    .all<Color>(Color.fromRGBO(
+                                                        139, 71, 118, 1)),
+                                          ),
+                                          onPressed: () {},
+                                          child: const Text(
+                                            'Iniciar',
+                                            style: TextStyle(fontSize: 22),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
                                   ].expand(
                                     (widget) => [
                                       widget,
                                       const SizedBox(
-                                        height: 20,
+                                        height: 18,
                                       )
                                     ],
                                   )

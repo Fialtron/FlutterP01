@@ -44,7 +44,7 @@ flutter:
   fonts:
     - family: Roboto
       fonts:
-        - asset: assets/fuentes/Roboto-Bold.ttf
+        - asset: assets/fuentes/Roboto-Regular.ttf
     - family: Open_Sans_Condensed
       fonts:
         - asset: assets/fuentes/OpenSansCondensed-Light.ttf
