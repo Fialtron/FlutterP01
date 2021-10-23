@@ -8,8 +8,13 @@ class InicioSesion extends StatelessWidget {
             top: true,
             bottom: false,
             child: Stack(children: [
-              Container(
-                color: Colors.white,
+              SizedBox.expand(
+                child: Container(
+                    color: Colors.blue,
+                    child: FittedBox(
+                      fit: BoxFit.fitWidth,
+                      child: Image.asset('assets/imagenes/inicio.png'),
+                    )),
               ),
               Container(
                 child: Column(children: [
@@ -24,7 +29,7 @@ class InicioSesion extends StatelessWidget {
                       child: Align(
                         alignment: Alignment.center,
                         child: Container(
-                          color: Color.fromRGBO(224, 218, 218, 0.45),
+                          color: Color.fromRGBO(224, 218, 218, 0.55),
                           width: 500,
                           child: SingleChildScrollView(
                             padding: const EdgeInsets.all(16),
@@ -76,7 +81,10 @@ class InicioSesion extends StatelessWidget {
                                                     .all<Color>(Color.fromRGBO(
                                                         139, 71, 118, 1)),
                                           ),
-                                          onPressed: () {},
+                                          onPressed: () {
+                                            Navigator.of(context)
+                                                .pushNamed('/dashboard');
+                                          },
                                           child: const Text(
                                             'Iniciar',
                                             style: TextStyle(fontSize: 22),

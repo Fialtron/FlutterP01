@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:receptorui/vistas/InicioSesion.dart';
+import 'package:receptorui/vistas/dashBoard.dart';
+import 'estandar/colores.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,10 +14,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       routes: {
         '/': (context) => haciaSesion(),
-        '/login': (context) => InicioSesion()
+        '/login': (context) => InicioSesion(),
+        '/dashboard': (context) => DashBoard()
       },
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colores.morado,
       ),
     );
   }
