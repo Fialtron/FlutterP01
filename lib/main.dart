@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:receptorui/vistas/InicioSesion.dart';
 import 'package:receptorui/vistas/dashBoard.dart';
+import 'package:receptorui/vistas/tabs.dart';
 import 'estandar/colores.dart';
 
 void main() {
@@ -15,10 +16,13 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => haciaSesion(),
         '/login': (context) => InicioSesion(),
-        '/dashboard': (context) => DashBoard()
+        '/dashboard': (context) => DashBoard(),
+        '/tabs': (context) => Tabs()
       },
       theme: ThemeData(
         primarySwatch: Colores.morado,
+        fontFamily: 'Open_Sans_Condensed',
+        appBarTheme: AppBarTheme(shadowColor: Color.fromRGBO(255, 255, 225, 0)),
       ),
     );
   }
