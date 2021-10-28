@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:receptorui/vistas/InicioSesion.dart';
 import 'package:receptorui/vistas/dashBoard.dart';
+import 'package:receptorui/vistas/formulario.dart';
 import 'package:receptorui/vistas/tabs.dart';
 import 'estandar/colores.dart';
 
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
         '/': (context) => haciaSesion(),
         '/login': (context) => InicioSesion(),
         '/dashboard': (context) => DashBoard(),
-        '/tabs': (context) => Tabs()
+        '/tabs': (context) => Tabs(),
+        '/form': (context) => Formulario(),
       },
       theme: ThemeData(
         primarySwatch: Colores.morado,

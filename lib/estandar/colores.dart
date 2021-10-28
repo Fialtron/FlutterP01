@@ -16,6 +16,22 @@ class Colores {
       900: const Color(0xff000000), //100%
     },
   );
+
+  static const MaterialColor rosado = const MaterialColor(
+    0xfffda2e1, // 0% comes in here, this will be color picked if no shade is selected when defining a Color property which doesn’t require a swatch.
+    const <int, Color>{
+      50: const Color(0xffe492cb), //10%
+      100: const Color(0xffca82b4), //20%
+      200: const Color(0xffb1719e), //30%
+      300: const Color(0xff986187), //40%
+      400: const Color(0xff7f5171), //50%
+      500: const Color(0xff65415a), //60%
+      600: const Color(0xff4c3143), //70%
+      700: const Color(0xff33202d), //80%
+      800: const Color(0xff191016), //90%
+      900: const Color(0xff000000), //100%
+    },
+  );
 }
 
 

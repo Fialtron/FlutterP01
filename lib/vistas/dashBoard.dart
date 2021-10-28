@@ -86,6 +86,10 @@ class DashBoard extends StatelessWidget {
                   leading: Icon(Icons.request_quote),
                   title: const Text("Legalización - Evento",
                       style: TextStyle(fontSize: 18)),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.pushNamed(context, '/form');
+                  },
                 ),
                 ListTile(
                   leading: Icon(Icons.request_quote),
@@ -123,11 +127,25 @@ class DashBoard extends StatelessWidget {
                 Container(
                   margin: const EdgeInsets.all(10.0),
                   //color: Colors.amber[600],
-
-                  child: Center(
-                      child: Text("Ver. 0.1.5",
-                          style: TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.bold))),
+                  child: SizedBox(
+                    width: 230,
+                    height: 100,
+                    child: Stack(
+                      children: [
+                        Container(
+                          alignment: Alignment.center,
+                          child: Image.asset('assets/imagenes/cuadritos.png'),
+                        ),
+                        Center(
+                          child: Text(
+                            "Ver. 0.1.5",
+                            style: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
                 SizedBox(
                   height: 20,
