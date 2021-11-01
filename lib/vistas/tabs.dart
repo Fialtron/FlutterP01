@@ -84,30 +84,187 @@ class Tabs extends StatelessWidget {
                         children: [
                           SizedBox(
                             width: 380,
+                            height: 170,
                             child: Card(
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  const ListTile(
-                                    leading: Icon(Icons.album),
-                                    title: Text('The Enchanted Nightingale'),
-                                    subtitle: Text(
-                                        'Music by Julie Gable. Lyrics by Sidney Stein.'),
+                              child: Row(
+                                children: [
+                                  Expanded(
+                                    child: Container(
+                                      padding: EdgeInsets.all(20),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceEvenly,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            children: [
+                                              Text.rich(
+                                                TextSpan(
+                                                  children: <TextSpan>[
+                                                    TextSpan(
+                                                      text: 'Id:',
+                                                      style: TextStyle(
+                                                        fontFamily:
+                                                            'RobotoBold',
+                                                        fontSize: 18,
+                                                      ),
+                                                    ),
+                                                    TextSpan(
+                                                      text: ' ' + '7',
+                                                      style: TextStyle(
+                                                          fontSize: 18),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                width: 20,
+                                              ),
+                                              Text.rich(
+                                                TextSpan(
+                                                  children: <TextSpan>[
+                                                    TextSpan(
+                                                      text: 'Fecha:',
+                                                      style: TextStyle(
+                                                          fontFamily:
+                                                              'RobotoBold',
+                                                          fontSize: 18),
+                                                    ),
+                                                    TextSpan(
+                                                      text: ' ' + '14-Aug-2021',
+                                                      style: TextStyle(
+                                                          fontSize: 18),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          Text.rich(
+                                            TextSpan(
+                                              children: <TextSpan>[
+                                                TextSpan(
+                                                  text: 'Remitente:',
+                                                  style: TextStyle(
+                                                      fontFamily: 'RobotoBold',
+                                                      fontSize: 18),
+                                                ),
+                                                TextSpan(
+                                                  text: ' ' +
+                                                      'support@postmanrkapp.com',
+                                                  style:
+                                                      TextStyle(fontSize: 18),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          Text.rich(
+                                            TextSpan(
+                                              children: <TextSpan>[
+                                                TextSpan(
+                                                  text: 'Asunto:',
+                                                  style: TextStyle(
+                                                      fontFamily: 'RobotoBold',
+                                                      fontSize: 18),
+                                                ),
+                                                TextSpan(
+                                                  text: ' ' +
+                                                      'FACTURA_ELECTRONICA#FE891',
+                                                  style:
+                                                      TextStyle(fontSize: 18),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
                                   ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
-                                    children: <Widget>[
-                                      TextButton(
-                                        child: const Text('BUY TICKETS'),
-                                        onPressed: () {/* ... */},
+                                  SizedBox(
+                                    width: 80,
+                                    height: double.infinity,
+                                    child: Ink(
+                                      color: Colores.rosado,
+                                      child: InkWell(
+                                        splashColor: Colores.rosado[100],
+                                        onTap: () {
+                                          showModalBottomSheet(
+                                            context: context,
+                                            builder: (context) {
+                                              return Container(
+                                                child: Stack(
+                                                  children: [
+                                                    Container(
+                                                      padding:
+                                                          EdgeInsets.all(20),
+                                                      height: 146,
+                                                      alignment:
+                                                          Alignment.topRight,
+                                                      child: Image.asset(
+                                                          'assets/imagenes/cuadritos.png'),
+                                                    ),
+                                                    Column(
+                                                      mainAxisSize:
+                                                          MainAxisSize.min,
+                                                      children: <Widget>[
+                                                        ListTile(
+                                                          leading: new Icon(
+                                                              Icons.article,
+                                                              color: Colores
+                                                                  .morado),
+                                                          title: new Text(
+                                                            'Descargar Factura',
+                                                            style: TextStyle(
+                                                                fontSize: 22),
+                                                          ),
+                                                          onTap: () async {},
+                                                        ),
+                                                        ListTile(
+                                                          leading: new Icon(
+                                                              Icons
+                                                                  .check_circle_outline,
+                                                              color:
+                                                                  Colors.green),
+                                                          title: new Text(
+                                                            'Aceptar Correo',
+                                                            style: TextStyle(
+                                                                fontSize: 22),
+                                                          ),
+                                                          onTap: () async {},
+                                                        ),
+                                                        ListTile(
+                                                          leading: new Icon(
+                                                              Icons
+                                                                  .cancel_outlined,
+                                                              color:
+                                                                  Colors.red),
+                                                          title: new Text(
+                                                            'Rechazar Correo',
+                                                            style: TextStyle(
+                                                                fontSize: 22),
+                                                          ),
+                                                          onTap: () async {},
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ],
+                                                ),
+                                              );
+                                            },
+                                          );
+                                        },
+                                        child: Container(
+                                          child: Icon(
+                                            Icons.view_list,
+                                            size: 30,
+                                            color: Colores.morado[100],
+                                          ),
+                                        ),
                                       ),
-                                      const SizedBox(width: 8),
-                                      TextButton(
-                                        child: const Text('LISTEN'),
-                                        onPressed: () {/* ... */},
-                                      ),
-                                      const SizedBox(width: 8),
-                                    ],
+                                    ),
                                   ),
                                 ],
                               ),
@@ -115,30 +272,123 @@ class Tabs extends StatelessWidget {
                           ),
                           SizedBox(
                             width: 380,
+                            height: 170,
                             child: Card(
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  const ListTile(
-                                    leading: Icon(Icons.album),
-                                    title: Text('The Enchanted Nightingale'),
-                                    subtitle: Text(
-                                        'Music by Julie Gable. Lyrics by Sidney Stein.'),
+                              child: Row(
+                                children: [
+                                  Expanded(
+                                    child: Container(
+                                      padding: EdgeInsets.all(20),
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceEvenly,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            children: [
+                                              Text.rich(
+                                                TextSpan(
+                                                  children: <TextSpan>[
+                                                    TextSpan(
+                                                      text: 'Id:',
+                                                      style: TextStyle(
+                                                        fontFamily:
+                                                            'RobotoBold',
+                                                        fontSize: 18,
+                                                      ),
+                                                    ),
+                                                    TextSpan(
+                                                      text: ' ' + '7',
+                                                      style: TextStyle(
+                                                          fontSize: 18),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                width: 20,
+                                              ),
+                                              Text.rich(
+                                                TextSpan(
+                                                  children: <TextSpan>[
+                                                    TextSpan(
+                                                      text: 'Fecha:',
+                                                      style: TextStyle(
+                                                          fontFamily:
+                                                              'RobotoBold',
+                                                          fontSize: 18),
+                                                    ),
+                                                    TextSpan(
+                                                      text: ' ' + '14-Aug-2021',
+                                                      style: TextStyle(
+                                                          fontSize: 18),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          Text.rich(
+                                            TextSpan(
+                                              children: <TextSpan>[
+                                                TextSpan(
+                                                  text: 'Asunto:',
+                                                  style: TextStyle(
+                                                      fontFamily: 'RobotoBold',
+                                                      fontSize: 18),
+                                                ),
+                                                TextSpan(
+                                                  text:
+                                                      ' ' + 'Pago de Almuerzo',
+                                                  style:
+                                                      TextStyle(fontSize: 18),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          Text.rich(
+                                            TextSpan(
+                                              children: <TextSpan>[
+                                                TextSpan(
+                                                  text: 'Valor:',
+                                                  style: TextStyle(
+                                                      fontFamily: 'RobotoBold',
+                                                      fontSize: 18),
+                                                ),
+                                                TextSpan(
+                                                  text: ' ' + ' 15.000',
+                                                  style:
+                                                      TextStyle(fontSize: 18),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
                                   ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
-                                    children: <Widget>[
-                                      TextButton(
-                                        child: const Text('BUY TICKETS'),
-                                        onPressed: () {/* ... */},
+                                  SizedBox(
+                                    width: 80,
+                                    height: double.infinity,
+                                    child: Ink(
+                                      color: Colores.rosado,
+                                      child: InkWell(
+                                        splashColor: Colores.rosado[100],
+                                        onTap: () {
+                                          Navigator.pushNamed(context, '/form');
+                                        },
+                                        child: Container(
+                                          child: Icon(
+                                            Icons.visibility,
+                                            size: 30,
+                                            color: Colores.morado[100],
+                                          ),
+                                        ),
                                       ),
-                                      const SizedBox(width: 8),
-                                      TextButton(
-                                        child: const Text('LISTEN'),
-                                        onPressed: () {/* ... */},
-                                      ),
-                                      const SizedBox(width: 8),
-                                    ],
+                                    ),
                                   ),
                                 ],
                               ),
@@ -156,6 +406,23 @@ class Tabs extends StatelessWidget {
                   ],
                 ),
               ),
+            ),
+            floatingActionButton: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                Semantics(
+                  label: 'NuevoEvento',
+                  child: FloatingActionButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/form');
+                    },
+                    heroTag: 'image0',
+                    backgroundColor: Colores.morado,
+                    tooltip: 'Clic para crear un nuevo evento',
+                    child: const Icon(Icons.add, size: 35),
+                  ),
+                ),
+              ],
             ),
           ),
         ),

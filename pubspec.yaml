@@ -48,6 +48,9 @@ flutter:
     - family: Roboto
       fonts:
         - asset: assets/fuentes/Roboto-Regular.ttf
+    - family: RobotoBold
+      fonts: 
+        - asset: assets/fuentes/OpenSansCondensed-Bold.ttf
     - family: Open_Sans_Condensed
       fonts:
         - asset: assets/fuentes/OpenSansCondensed-Light.ttf

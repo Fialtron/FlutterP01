@@ -41,7 +41,8 @@ class DashBoard extends StatelessWidget {
                                 alignment: Alignment.centerLeft,
                                 child: Text(
                                   'Receptor',
-                                  style: TextStyle(fontSize: 40),
+                                  style: TextStyle(
+                                      fontSize: 40, fontFamily: 'Roboto'),
                                 ),
                               ),
                               Container(
@@ -86,10 +87,7 @@ class DashBoard extends StatelessWidget {
                   leading: Icon(Icons.request_quote),
                   title: const Text("Legalización - Evento",
                       style: TextStyle(fontSize: 18)),
-                  onTap: () {
-                    Navigator.pop(context);
-                    Navigator.pushNamed(context, '/form');
-                  },
+                  onTap: () {},
                 ),
                 ListTile(
                   leading: Icon(Icons.request_quote),
