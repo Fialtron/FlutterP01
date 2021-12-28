@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:receptorui/estandar/colores.dart';
 
 class InicioSesion extends StatelessWidget {
   @override
@@ -13,23 +14,26 @@ class InicioSesion extends StatelessWidget {
                     color: Colors.blue,
                     child: FittedBox(
                       fit: BoxFit.fitWidth,
-                      child: Image.asset('assets/imagenes/inicio.png'),
+                      child: Image.asset('assets/imagenes/nuevoInicio.png'),
                     )),
               ),
               Container(
                 child: Column(children: [
                   Container(
-                    padding: EdgeInsets.all(15),
-                    child: Center(
-                      child: Image.asset('assets/imagenes/logo.jpeg'),
-                    ),
+                    padding: EdgeInsets.all(5),
+                    child: SizedBox(
+                      height: 140,
+                      child:Center(
+                        child: Image.asset('assets/imagenes/nuevoLogo.png'),
+                      ), 
+                    ) ,
                   ),
                   Form(
                     child: Scrollbar(
                       child: Align(
                         alignment: Alignment.center,
                         child: Container(
-                          color: Color.fromRGBO(224, 218, 218, 0.55),
+                          color: Color.fromRGBO(243, 250, 234, 0.92),
                           width: 500,
                           child: SingleChildScrollView(
                             padding: const EdgeInsets.all(16),
@@ -78,8 +82,7 @@ class InicioSesion extends StatelessWidget {
                                           style: ButtonStyle(
                                             backgroundColor:
                                                 MaterialStateProperty
-                                                    .all<Color>(Color.fromRGBO(
-                                                        139, 71, 118, 1)),
+                                                    .all<Color>(Colores.azul),
                                           ),
                                           onPressed: () {
                                             Navigator.of(context)
@@ -96,7 +99,7 @@ class InicioSesion extends StatelessWidget {
                                     (widget) => [
                                       widget,
                                       const SizedBox(
-                                        height: 18,
+                                        height: 10,
                                       )
                                     ],
                                   )

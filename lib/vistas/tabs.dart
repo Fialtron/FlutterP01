@@ -13,6 +13,7 @@ class Tabs extends StatelessWidget {
           length: 3,
           child: Scaffold(
             appBar: AppBar(
+              elevation: 0.0,
               toolbarHeight: 180,
               flexibleSpace: Stack(
                 children: [
@@ -31,21 +32,21 @@ class Tabs extends StatelessWidget {
                               child: Text(
                                 "Correos Recibidos",
                                 style: TextStyle(
-                                    color: Colors.white, fontSize: 23),
+                                    color: Colors.white, fontSize: 22),
                               ),
                             ),
                             SizedBox(
                               height: 5,
                             ),
                             TabBar(
-                              indicatorColor: Colores.rosado,
+                              indicatorColor: Colores.verde,
                               tabs: [
                                 Tab(
                                   icon: Icon(Icons.description),
                                   child: Text(
                                     "Pendientes",
                                     style: TextStyle(
-                                        color: Colors.white, fontSize: 20),
+                                        color: Colors.white, fontSize: 15),
                                   ),
                                 ),
                                 Tab(
@@ -53,7 +54,7 @@ class Tabs extends StatelessWidget {
                                   child: Text(
                                     "Aceptadas",
                                     style: TextStyle(
-                                        color: Colors.white, fontSize: 20),
+                                        color: Colors.white, fontSize: 15),
                                   ),
                                 ),
                                 Tab(
@@ -61,7 +62,7 @@ class Tabs extends StatelessWidget {
                                   child: Text(
                                     "Rechazadas",
                                     style: TextStyle(
-                                        color: Colors.white, fontSize: 20),
+                                        color: Colors.white, fontSize: 15),
                                   ),
                                 ),
                               ],
@@ -108,14 +109,14 @@ class Tabs extends StatelessWidget {
                                                       text: 'Id:',
                                                       style: TextStyle(
                                                         fontFamily:
-                                                            'RobotoBold',
+                                                            'NexaBold',
                                                         fontSize: 18,
                                                       ),
                                                     ),
                                                     TextSpan(
                                                       text: ' ' + '7',
                                                       style: TextStyle(
-                                                          fontSize: 18),
+                                                          fontSize: 15),
                                                     ),
                                                   ],
                                                 ),
@@ -130,13 +131,13 @@ class Tabs extends StatelessWidget {
                                                       text: 'Fecha:',
                                                       style: TextStyle(
                                                           fontFamily:
-                                                              'RobotoBold',
-                                                          fontSize: 18),
+                                                              'NexaBold',
+                                                          fontSize: 15),
                                                     ),
                                                     TextSpan(
                                                       text: ' ' + '14-Aug-2021',
                                                       style: TextStyle(
-                                                          fontSize: 18),
+                                                          fontSize: 15),
                                                     ),
                                                   ],
                                                 ),
@@ -149,14 +150,14 @@ class Tabs extends StatelessWidget {
                                                 TextSpan(
                                                   text: 'Remitente:',
                                                   style: TextStyle(
-                                                      fontFamily: 'RobotoBold',
+                                                      fontFamily: 'NexaBold',
                                                       fontSize: 18),
                                                 ),
                                                 TextSpan(
                                                   text: ' ' +
                                                       'support@postmanrkapp.com',
                                                   style:
-                                                      TextStyle(fontSize: 18),
+                                                      TextStyle(fontSize: 15),
                                                 ),
                                               ],
                                             ),
@@ -167,14 +168,14 @@ class Tabs extends StatelessWidget {
                                                 TextSpan(
                                                   text: 'Asunto:',
                                                   style: TextStyle(
-                                                      fontFamily: 'RobotoBold',
+                                                      fontFamily: 'NexaBold',
                                                       fontSize: 18),
                                                 ),
                                                 TextSpan(
                                                   text: ' ' +
                                                       'FACTURA_ELECTRONICA#FE891',
                                                   style:
-                                                      TextStyle(fontSize: 18),
+                                                      TextStyle(fontSize: 15),
                                                 ),
                                               ],
                                             ),
@@ -187,9 +188,9 @@ class Tabs extends StatelessWidget {
                                     width: 80,
                                     height: double.infinity,
                                     child: Ink(
-                                      color: Colores.rosado,
+                                      color: Colores.verde,
                                       child: InkWell(
-                                        splashColor: Colores.rosado[100],
+                                        splashColor: Colores.verde[100],
                                         onTap: () {
                                           showModalBottomSheet(
                                             context: context,
@@ -204,7 +205,7 @@ class Tabs extends StatelessWidget {
                                                       alignment:
                                                           Alignment.topRight,
                                                       child: Image.asset(
-                                                          'assets/imagenes/cuadritos.png'),
+                                                          'assets/imagenes/nuevosCuadritos.png'),
                                                     ),
                                                     Column(
                                                       mainAxisSize:
@@ -214,11 +215,11 @@ class Tabs extends StatelessWidget {
                                                           leading: new Icon(
                                                               Icons.article,
                                                               color: Colores
-                                                                  .morado),
+                                                                  .azul),
                                                           title: new Text(
                                                             'Descargar Factura',
                                                             style: TextStyle(
-                                                                fontSize: 22),
+                                                                fontSize: 18),
                                                           ),
                                                           onTap: () async {},
                                                         ),
@@ -231,7 +232,7 @@ class Tabs extends StatelessWidget {
                                                           title: new Text(
                                                             'Aceptar Correo',
                                                             style: TextStyle(
-                                                                fontSize: 22),
+                                                                fontSize: 18),
                                                           ),
                                                           onTap: () async {},
                                                         ),
@@ -244,7 +245,7 @@ class Tabs extends StatelessWidget {
                                                           title: new Text(
                                                             'Rechazar Correo',
                                                             style: TextStyle(
-                                                                fontSize: 22),
+                                                                fontSize: 18),
                                                           ),
                                                           onTap: () async {},
                                                         ),
@@ -260,7 +261,7 @@ class Tabs extends StatelessWidget {
                                           child: Icon(
                                             Icons.view_list,
                                             size: 30,
-                                            color: Colores.morado[100],
+                                            color: Colors.white,
                                           ),
                                         ),
                                       ),
@@ -296,14 +297,14 @@ class Tabs extends StatelessWidget {
                                                       text: 'Id:',
                                                       style: TextStyle(
                                                         fontFamily:
-                                                            'RobotoBold',
+                                                            'NexaBold',
                                                         fontSize: 18,
                                                       ),
                                                     ),
                                                     TextSpan(
                                                       text: ' ' + '7',
                                                       style: TextStyle(
-                                                          fontSize: 18),
+                                                          fontSize: 15),
                                                     ),
                                                   ],
                                                 ),
@@ -318,13 +319,13 @@ class Tabs extends StatelessWidget {
                                                       text: 'Fecha:',
                                                       style: TextStyle(
                                                           fontFamily:
-                                                              'RobotoBold',
+                                                              'NexaBold',
                                                           fontSize: 18),
                                                     ),
                                                     TextSpan(
                                                       text: ' ' + '14-Aug-2021',
                                                       style: TextStyle(
-                                                          fontSize: 18),
+                                                          fontSize: 15),
                                                     ),
                                                   ],
                                                 ),
@@ -337,14 +338,14 @@ class Tabs extends StatelessWidget {
                                                 TextSpan(
                                                   text: 'Asunto:',
                                                   style: TextStyle(
-                                                      fontFamily: 'RobotoBold',
+                                                      fontFamily: 'NexaBold',
                                                       fontSize: 18),
                                                 ),
                                                 TextSpan(
                                                   text:
                                                       ' ' + 'Pago de Almuerzo',
                                                   style:
-                                                      TextStyle(fontSize: 18),
+                                                      TextStyle(fontSize: 15),
                                                 ),
                                               ],
                                             ),
@@ -355,13 +356,13 @@ class Tabs extends StatelessWidget {
                                                 TextSpan(
                                                   text: 'Valor:',
                                                   style: TextStyle(
-                                                      fontFamily: 'RobotoBold',
+                                                      fontFamily: 'NexaBold',
                                                       fontSize: 18),
                                                 ),
                                                 TextSpan(
                                                   text: ' ' + ' 15.000',
                                                   style:
-                                                      TextStyle(fontSize: 18),
+                                                      TextStyle(fontSize: 15),
                                                 ),
                                               ],
                                             ),
@@ -374,9 +375,9 @@ class Tabs extends StatelessWidget {
                                     width: 80,
                                     height: double.infinity,
                                     child: Ink(
-                                      color: Colores.rosado,
+                                      color: Colores.verde,
                                       child: InkWell(
-                                        splashColor: Colores.rosado[100],
+                                        splashColor: Colores.verde[100],
                                         onTap: () {
                                           Navigator.pushNamed(context, '/form');
                                         },
@@ -384,7 +385,7 @@ class Tabs extends StatelessWidget {
                                           child: Icon(
                                             Icons.visibility,
                                             size: 30,
-                                            color: Colores.morado[100],
+                                            color: Colors.white,
                                           ),
                                         ),
                                       ),
@@ -417,7 +418,7 @@ class Tabs extends StatelessWidget {
                       Navigator.pushNamed(context, '/form');
                     },
                     heroTag: 'image0',
-                    backgroundColor: Colores.morado,
+                    backgroundColor: Colores.azul,
                     tooltip: 'Clic para crear un nuevo evento',
                     child: const Icon(Icons.add, size: 35),
                   ),

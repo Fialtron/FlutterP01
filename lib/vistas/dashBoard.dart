@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:receptorui/estandar/appbarF.dart';
+import 'package:receptorui/estandar/colores.dart';
 
 class DashBoard extends StatelessWidget {
   @override
@@ -10,6 +11,7 @@ class DashBoard extends StatelessWidget {
       Scaffold(
         appBar: AppBar(
             toolbarHeight: 110,
+            elevation: 0.0,
             title: Container(
                 child: Text(
               "Dashboard",
@@ -27,34 +29,15 @@ class DashBoard extends StatelessWidget {
                   child: DrawerHeader(
                     padding: EdgeInsets.zero,
                     decoration:
-                        BoxDecoration(color: Color.fromRGBO(139, 71, 118, 1)),
+                        BoxDecoration(color: Colores.azul),
                     child: Center(
                       child: SizedBox(
                         width: double.infinity,
                         child: Container(
-                          height: 90,
+                          height: 120,
                           color: Colors.white,
-                          child: Column(
-                            children: [
-                              Container(
-                                padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  'Receptor',
-                                  style: TextStyle(
-                                      fontSize: 40, fontFamily: 'Roboto'),
-                                ),
-                              ),
-                              Container(
-                                padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-                                alignment: Alignment.centerLeft,
-                                child: Text(
-                                  'Facturación Electrónica',
-                                  style: TextStyle(fontSize: 22),
-                                ),
-                              ),
-                            ],
-                          ),
+                          child:  Image.asset('assets/imagenes/logoSinEs.png'),
+                            
                         ),
                       ),
                     ),
@@ -64,7 +47,7 @@ class DashBoard extends StatelessWidget {
                   padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
                   child: Text('Correos',
                       style:
-                          TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
                 ),
                 ListTile(
                   leading: Icon(Icons.email),
@@ -81,7 +64,7 @@ class DashBoard extends StatelessWidget {
                   padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
                   child: Text('Caja Menor',
                       style:
-                          TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
                 ),
                 ListTile(
                   leading: Icon(Icons.request_quote),
@@ -103,7 +86,7 @@ class DashBoard extends StatelessWidget {
                   padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
                   child: Text('Flujos',
                       style:
-                          TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
                 ),
                 ListTile(
                   leading: Icon(Icons.description),
@@ -132,7 +115,7 @@ class DashBoard extends StatelessWidget {
                       children: [
                         Container(
                           alignment: Alignment.center,
-                          child: Image.asset('assets/imagenes/cuadritos.png'),
+                          child: Image.asset('assets/imagenes/nuevosCuadritos.png'),
                         ),
                         Center(
                           child: Text(

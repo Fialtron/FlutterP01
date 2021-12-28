@@ -32,10 +32,44 @@ class Colores {
       900: const Color(0xff000000), //100%
     },
   );
+
+
+  static const MaterialColor verde = const MaterialColor(
+    0xff88c82b, // 0% comes in here, this will be color picked if no shade is selected when defining a Color property which doesn’t require a swatch.
+    const <int, Color>{
+      50: const Color(0xff7ab427), //10%
+      100: const Color(0xff6da022), //20%
+      200: const Color(0xff5f8c1e), //30%
+      300: const Color(0xff52781a), //40%
+      400: const Color(0xff446416), //50%
+      500: const Color(0xff365011), //60%
+      600: const Color(0xff293c0d), //70%
+      700: const Color(0xff1b2809), //80%
+      800: const Color(0xff0e1404), //90%
+      900: const Color(0xff000000), //100%
+    },
+  );
+
+  static const MaterialColor azul = const MaterialColor(
+    0xff00a1be, // 0% comes in here, this will be color picked if no shade is selected when defining a Color property which doesn’t require a swatch.
+    const <int, Color>{
+      50: const Color(0xff0091ab), //10%
+      100: const Color(0xff008198), //20%
+      200: const Color(0xff007185), //30%
+      300: const Color(0xff006172), //40%
+      400: const Color(0xff00515f), //50%
+      500: const Color(0xff00404c), //60%
+      600: const Color(0xff003039), //70%
+      700: const Color(0xff002026), //80%
+      800: const Color(0xff001013), //90%
+      900: const Color(0xff000000), //100%
+    },
+  );
 }
 
 
 /*
+https://maketintsandshades.com
 class Palette {
   static const MaterialColor kToDark = const MaterialColor(
     0xffe55f48, // 0% comes in here, this will be color picked if no shade is selected when defining a Color property which doesn’t require a swatch.

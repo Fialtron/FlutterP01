@@ -8,6 +8,7 @@ class Formulario extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 110,
+        elevation: 0.0,
         title: Container(
             child: Text(
           "Eventos",
@@ -37,7 +38,7 @@ class Formulario extends StatelessWidget {
                                 Expanded(
                                   flex: 2,
                                   child: TextFormField(
-                                    style: TextStyle(fontSize: 18),
+                                    style: TextStyle(fontSize: 16),
                                     decoration: const InputDecoration(
                                         filled: true, labelText: 'Id:'),
                                     readOnly: true,
@@ -49,7 +50,7 @@ class Formulario extends StatelessWidget {
                                 Expanded(
                                   flex: 3,
                                   child: TextFormField(
-                                    style: TextStyle(fontSize: 18),
+                                    style: TextStyle(fontSize: 16),
                                     decoration: const InputDecoration(
                                         filled: true, labelText: 'Fecha:'),
                                     textAlign: TextAlign.right,
@@ -60,14 +61,14 @@ class Formulario extends StatelessWidget {
                             ),
                           ),
                           TextFormField(
-                            style: TextStyle(fontSize: 18),
+                            style: TextStyle(fontSize: 16),
                             decoration: const InputDecoration(
                                 filled: true,
                                 labelText: 'Establecimiento:',
                                 icon: Icon(Icons.add_location_alt)),
                           ),
                           TextFormField(
-                            style: TextStyle(fontSize: 18),
+                            style: TextStyle(fontSize: 16),
                             decoration: const InputDecoration(
                               filled: true,
                               labelText: 'Correo Establecimiento:',
@@ -75,7 +76,7 @@ class Formulario extends StatelessWidget {
                             ),
                           ),
                           TextFormField(
-                            style: TextStyle(fontSize: 18),
+                            style: TextStyle(fontSize: 16),
                             maxLines: 2,
                             decoration: const InputDecoration(
                               filled: true,
@@ -85,7 +86,7 @@ class Formulario extends StatelessWidget {
                             textAlign: TextAlign.right,
                           ),
                           TextFormField(
-                            style: TextStyle(fontSize: 18),
+                            style: TextStyle(fontSize: 16),
                             decoration: const InputDecoration(
                               filled: true,
                               labelText: 'Valor:',
@@ -101,7 +102,7 @@ class Formulario extends StatelessWidget {
                                   child: TextFormField(
                                     decoration: InputDecoration(
                                         filled: true, labelText: 'Soporte:'),
-                                    style: TextStyle(fontSize: 18),
+                                    style: TextStyle(fontSize: 16),
                                     textInputAction: TextInputAction.newline,
                                     keyboardType: TextInputType.multiline,
                                     maxLines: 3,
@@ -115,7 +116,7 @@ class Formulario extends StatelessWidget {
                                       Ink(
                                         decoration: const ShapeDecoration(
                                             shape: CircleBorder(),
-                                            color: Colores.morado),
+                                            color: Colores.azul),
                                         child: new IconButton(
                                           color: Colors.white,
                                           padding: new EdgeInsets.all(0.0),
@@ -135,7 +136,7 @@ class Formulario extends StatelessWidget {
                                                         alignment:
                                                             Alignment.topRight,
                                                         child: Image.asset(
-                                                            'assets/imagenes/cuadritos.png'),
+                                                            'assets/imagenes/nuevosCuadritos.png'),
                                                       ),
                                                       Column(
                                                         mainAxisSize:
@@ -148,7 +149,7 @@ class Formulario extends StatelessWidget {
                                                             title: new Text(
                                                               'Tomar Foto',
                                                               style: TextStyle(
-                                                                  fontSize: 22),
+                                                                  fontSize: 18),
                                                             ),
                                                           ),
                                                           ListTile(
@@ -157,7 +158,7 @@ class Formulario extends StatelessWidget {
                                                             title: new Text(
                                                               'Seleccionar de Galeria',
                                                               style: TextStyle(
-                                                                  fontSize: 22),
+                                                                  fontSize: 18),
                                                             ),
                                                           ),
                                                         ],
@@ -176,7 +177,7 @@ class Formulario extends StatelessWidget {
                                       Ink(
                                         decoration: const ShapeDecoration(
                                             shape: CircleBorder(),
-                                            color: Colores.morado),
+                                            color: Colores.azul),
                                         child: new IconButton(
                                           color: Colors.white,
                                           icon: new Icon(Icons.visibility,
@@ -199,7 +200,7 @@ class Formulario extends StatelessWidget {
                                 style: ButtonStyle(
                                   backgroundColor:
                                       MaterialStateProperty.all<Color>(
-                                          Colores.morado),
+                                          Colores.azul),
                                 ),
                                 onPressed: () {},
                                 child: const Text(

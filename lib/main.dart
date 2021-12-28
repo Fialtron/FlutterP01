@@ -22,9 +22,9 @@ class MyApp extends StatelessWidget {
         '/form': (context) => Formulario(),
       },
       theme: ThemeData(
-        primarySwatch: Colores.morado,
-        fontFamily: 'Open_Sans_Condensed',
-        appBarTheme: AppBarTheme(shadowColor: Color.fromRGBO(255, 255, 225, 0)),
+        primarySwatch: Colores.azul,
+        fontFamily: 'Nexa',
+       // appBarTheme: AppBarTheme(shadowColor: Color.fromRGBO(255, 255, 225, 0)),
       ),
     );
   }

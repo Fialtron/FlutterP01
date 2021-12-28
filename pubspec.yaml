@@ -43,6 +43,12 @@ flutter:
     - assets/imagenes/inicio.png
     - assets/imagenes/fullappbar.png
     - assets/imagenes/cuadritos.png
+    - assets/imagenes/nuevoInicio.png
+    - assets/imagenes/nuevoLogo.png
+    - assets/imagenes/nuevosCuadritos.png
+    - assets/imagenes/logoVertical.png
+    - assets/imagenes/logoSinEs.png
+    
 
   fonts:
     - family: Roboto
@@ -54,6 +60,12 @@ flutter:
     - family: Open_Sans_Condensed
       fonts:
         - asset: assets/fuentes/OpenSansCondensed-Light.ttf
+    - family: Nexa
+      fonts:
+        - asset: assets/fuentes/NexaLight.otf
+    - family: NexaBold
+      fonts:
+        - asset: assets/fuentes/NexaXBold.otf
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
