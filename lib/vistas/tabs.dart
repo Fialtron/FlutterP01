@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:receptorui/estandar/appbarF.dart';
+import 'package:receptorui/estandar/appbarTabs.dart';
 import 'package:receptorui/estandar/colores.dart';
 
 class Tabs extends StatelessWidget {
@@ -14,39 +14,45 @@ class Tabs extends StatelessWidget {
           child: Scaffold(
             appBar: AppBar(
               elevation: 0.0,
-              toolbarHeight: 180,
+              toolbarHeight: 115,
               flexibleSpace: Stack(
                 children: [
-                  MyAppbar(),
+                  MyAppbarTabs(),
                   Container(
+                    padding: EdgeInsets.fromLTRB(15, 0, 5, 0),
                     alignment: Alignment.centerRight,
                     child: SizedBox(
-                      width: 360,
+                      width: double.infinity,
                       child: Container(
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             SizedBox(
-                              height: 30,
+                              height: 42,
                             ),
                             Center(
                               child: Text(
                                 "Correos Recibidos",
                                 style: TextStyle(
-                                    color: Colors.white, fontSize: 22),
+                                    color: Colors.white, fontSize: 18),
                               ),
                             ),
                             SizedBox(
-                              height: 5,
+                              height: 2,
                             ),
                             TabBar(
-                              indicatorColor: Colores.verde,
+                             
+                              indicatorWeight: 0.01,
+                              indicatorColor: Colors.white10,
+                              labelColor: Colores.verde,
+                              unselectedLabelColor: Colors.white,
                               tabs: [
                                 Tab(
                                   icon: Icon(Icons.description),
                                   child: Text(
                                     "Pendientes",
                                     style: TextStyle(
-                                        color: Colors.white, fontSize: 15),
+                                        color: Colors.white, fontSize: 14),
                                   ),
                                 ),
                                 Tab(
@@ -54,7 +60,7 @@ class Tabs extends StatelessWidget {
                                   child: Text(
                                     "Aceptadas",
                                     style: TextStyle(
-                                        color: Colors.white, fontSize: 15),
+                                        color: Colors.white, fontSize: 14),
                                   ),
                                 ),
                                 Tab(
@@ -62,7 +68,7 @@ class Tabs extends StatelessWidget {
                                   child: Text(
                                     "Rechazadas",
                                     style: TextStyle(
-                                        color: Colors.white, fontSize: 15),
+                                        color: Colors.white, fontSize: 14),
                                   ),
                                 ),
                               ],
@@ -108,8 +114,7 @@ class Tabs extends StatelessWidget {
                                                     TextSpan(
                                                       text: 'Id:',
                                                       style: TextStyle(
-                                                        fontFamily:
-                                                            'NexaBold',
+                                                        fontFamily: 'NexaBold',
                                                         fontSize: 18,
                                                       ),
                                                     ),
@@ -214,8 +219,8 @@ class Tabs extends StatelessWidget {
                                                         ListTile(
                                                           leading: new Icon(
                                                               Icons.article,
-                                                              color: Colores
-                                                                  .azul),
+                                                              color:
+                                                                  Colores.azul),
                                                           title: new Text(
                                                             'Descargar Factura',
                                                             style: TextStyle(
@@ -296,8 +301,7 @@ class Tabs extends StatelessWidget {
                                                     TextSpan(
                                                       text: 'Id:',
                                                       style: TextStyle(
-                                                        fontFamily:
-                                                            'NexaBold',
+                                                        fontFamily: 'NexaBold',
                                                         fontSize: 18,
                                                       ),
                                                     ),

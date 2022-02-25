@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:receptorui/vistas/InicioSesion.dart';
 import 'package:receptorui/vistas/dashBoard.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colores.azul,
         fontFamily: 'Nexa',
-       // appBarTheme: AppBarTheme(shadowColor: Color.fromRGBO(255, 255, 225, 0)),
+        // appBarTheme: AppBarTheme(shadowColor: Color.fromRGBO(255, 255, 225, 0)),
       ),
     );
   }

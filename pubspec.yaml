@@ -42,6 +42,7 @@ flutter:
     - assets/imagenes/logo.jpeg
     - assets/imagenes/inicio.png
     - assets/imagenes/fullappbar.png
+    - assets/imagenes/tabsappbar.png
     - assets/imagenes/cuadritos.png
     - assets/imagenes/nuevoInicio.png
     - assets/imagenes/nuevoLogo.png

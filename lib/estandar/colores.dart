@@ -33,7 +33,6 @@ class Colores {
     },
   );
 
-
   static const MaterialColor verde = const MaterialColor(
     0xff88c82b, // 0% comes in here, this will be color picked if no shade is selected when defining a Color property which doesn’t require a swatch.
     const <int, Color>{
