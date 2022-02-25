@@ -27,7 +27,7 @@ class DashBoard extends StatelessWidget {
                 padding: EdgeInsets.zero,
                 children: [
                   SizedBox(
-                    height: 160,
+                    height: 130,
                     child: DrawerHeader(
                       padding: EdgeInsets.zero,
                       decoration: BoxDecoration(color: Colores.azul),
@@ -35,7 +35,7 @@ class DashBoard extends StatelessWidget {
                         child: SizedBox(
                           width: double.infinity,
                           child: Container(
-                            height: 110,
+                            height: 80,
                             color: Colors.white,
                             child: Image.asset('assets/imagenes/logoSinEs.png'),
                           ),

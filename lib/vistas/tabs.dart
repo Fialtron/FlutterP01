@@ -91,7 +91,7 @@ class Tabs extends StatelessWidget {
                         children: [
                           SizedBox(
                             width: 380,
-                            height: 170,
+                            height: 70,
                             child: Card(
                               child: Row(
                                 children: [
